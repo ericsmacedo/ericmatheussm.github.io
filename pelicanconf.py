@@ -51,6 +51,6 @@ HOSTED_ON = {
     }
 
 # enabling search
-PLUGIN_PATH = ['../pelican-plugins/']
-PLUGINS = ['tipue_search']
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+#PLUGIN_PATH = ['../pelican-plugins/tipue_search']
+#PLUGINS = ['tipue_search']
+#DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
