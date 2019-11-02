@@ -42,4 +42,4 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 # Landing pages
-LANDING_PAGE_TITLE = "Sharing what I learn and love with the world"
+LANDING_PAGE_TITLE = "Sharing what I learn and love"# with the world"
