@@ -43,3 +43,14 @@ DEFAULT_PAGINATION = 10
 
 # Landing pages
 LANDING_PAGE_TITLE = "Sharing what I learn and love"# with the world"
+
+# footer
+HOSTED_ON = {
+    "name": "GitHub Pages",
+    "url":"https://pages.github.com"
+    }
+
+# enabling search
+PLUGIN_PATH = ['/home/eric/Documents/pelican-plugins/']
+PLUGINS = ['tipue_search']
+DIRECT_TEMPLATES = ['search']
