@@ -9,19 +9,19 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="dsp, probability, digital signal processing, " />
+<meta name="keywords" content="dsp, transform, digital signal processing, " />
 
-<meta property="og:title" content="Expected Value and Variance "/>
-<meta property="og:url" content="/expected-value-variance.html" />
-<meta property="og:description" content="Expected value¶The expected value of a random variable $X$ is defined as: $$E[X]=\sum_{i=1}^{k} p_i\cdot x_i$$where $p_i$ is the probability of $x_i$ occurring, and k the number o possible values for the variable $X$. Interpretations: Center of gravity of PMF Average in large number of repetitions of the experiment. Properties: $E[\alpha] = \alpha$ $E[\alpha X] = \alpha E[X]$" />
+<meta property="og:title" content="Z transform "/>
+<meta property="og:url" content="/z-transform.html" />
+<meta property="og:description" content="The objective is to generalize the fourier transform. Discrete Time Fourier Transform¶$$ x[n] = \sum_{n=-\infty}^{+\infty} x[n]e^{-j \Omega n} $$There is a set of signals more general than the complex exponentials, wich are also eigenfunctions of LTI systems. $$ z = re^{j\Omega} $$ r: the magnitude of the complex number $\Omega$: the angle of the complex number Eigenfunctions definition" />
 <meta property="og:site_name" content="Eric&#39;s blog" />
 <meta property="og:article:author" content="Eric Macedo" />
-<meta property="og:article:published_time" content="2019-11-03T15:45:00-02:00" />
-<meta property="og:article:modified_time" content="2019-11-03T15:45:00-02:00" />
-<meta name="twitter:title" content="Expected Value and Variance ">
-<meta name="twitter:description" content="Expected value¶The expected value of a random variable $X$ is defined as: $$E[X]=\sum_{i=1}^{k} p_i\cdot x_i$$where $p_i$ is the probability of $x_i$ occurring, and k the number o possible values for the variable $X$. Interpretations: Center of gravity of PMF Average in large number of repetitions of the experiment. Properties: $E[\alpha] = \alpha$ $E[\alpha X] = \alpha E[X]$">
+<meta property="og:article:published_time" content="2019-11-03T16:07:00-02:00" />
+<meta property="og:article:modified_time" content="2019-11-03T16:07:00-02:00" />
+<meta name="twitter:title" content="Z transform ">
+<meta name="twitter:description" content="The objective is to generalize the fourier transform. Discrete Time Fourier Transform¶$$ x[n] = \sum_{n=-\infty}^{+\infty} x[n]e^{-j \Omega n} $$There is a set of signals more general than the complex exponentials, wich are also eigenfunctions of LTI systems. $$ z = re^{j\Omega} $$ r: the magnitude of the complex number $\Omega$: the angle of the complex number Eigenfunctions definition">
 
-        <title>Expected Value and Variance  · Eric&#39;s blog
+        <title>Z transform  · Eric&#39;s blog
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
@@ -68,7 +68,7 @@
 <article itemscope>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="/expected-value-variance.html"> Expected Value and Variance  </a></h1>
+    <h1><a href="/z-transform.html"> Z transform  </a></h1>
     </header>
 </div>
 
@@ -1227,27 +1227,60 @@ h6:hover .anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Expected-value">Expected value<a class="anchor-link" href="#Expected-value">&#182;</a></h3><p>The expected value of a random variable $X$ is defined as:</p>
-$$E[X]=\sum_{i=1}^{k} p_i\cdot x_i$$<p>where $p_i$ is the probability of $x_i$ occurring, and k the number o possible values for the variable $X$.</p>
-<p><strong>Interpretations</strong>:</p>
+<p>The objective is to generalize the fourier transform.</p>
+<h3 id="Discrete-Time-Fourier-Transform"><strong>Discrete Time Fourier Transform</strong><a class="anchor-link" href="#Discrete-Time-Fourier-Transform">&#182;</a></h3>$$
+x[n] =  \sum_{n=-\infty}^{+\infty} x[n]e^{-j \Omega n}
+$$<p>There is a set of signals more general than the complex exponentials, wich are also eigenfunctions of LTI systems.
+$$
+z = re^{j\Omega}
+$$</p>
 <ul>
-<li>Center of gravity of PMF</li>
-<li>Average in large number of repetitions of the experiment.</li>
+<li>r: the magnitude of the complex number</li>
+<li>$\Omega$: the angle of the complex number</li>
 </ul>
-<p><strong>Properties</strong>:</p>
-<ul>
-<li>$E[\alpha] = \alpha$</li>
-<li>$E[\alpha X] = \alpha E[X]$</li>
-<li>$E[\alpha X + \beta] = \alpha E[x] + E[\beta]$</li>
-</ul>
-<h3 id="Variance">Variance<a class="anchor-link" href="#Variance">&#182;</a></h3><p>The variance of a random variable can be expressed in terms of the expected value:
-$$var(X) = E[(X-E[X])^2]$$
-$$= \sum_x (x-E[X])^2p_X(x)$$
-$$=E[X^2]-(E[X])^2 $$</p>
-<p><strong>Properties</strong>:</p>
-<ul>
-<li>$var(X)\geq0$</li>
-<li>$var(\alpha X +\beta) = \alpha^2 var(X)$: Adding a constant to a random variable does not affect its variance.</li>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Eigenfunctions-definition:"><strong>Eigenfunctions definition</strong>:<a class="anchor-link" href="#Eigenfunctions-definition:">&#182;</a></h3><p>An eigenfunction is a function for which the output of the operator is the same function, scaled by some constant.</p>
+<p>We can prove that z is a eigenfunction of LTI system by:
+$$
+\sum_{k=-\infty}^{+\infty} x[k]z^{n-k} = \sum_{k=-\infty}^{+\infty} x[k]z^n z^{-k} = z^n \sum_{k=-\infty}^{+\infty} x[k]z^{-k} = z^n \cdot H(z)
+$$</p>
+<p>So $z^n$ is an eigenfunction of an LTI system because the system response is the same as the input times the constant $H(z)$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="z-transform-definition:"><strong>z-transform definition</strong>:<a class="anchor-link" href="#z-transform-definition:">&#182;</a></h3>$$
+\text{H}(z) = \sum_{n=-\infty}^{+\infty} x[n]z^{-n}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="The-relations-between-the-fourier-transform-and-the-z-transform"><strong>The relations between the fourier transform and the z-transform</strong><a class="anchor-link" href="#The-relations-between-the-fourier-transform-and-the-z-transform">&#182;</a></h3><p>The Z transform has a very close relation to the Fourier Transform. If we compare the fourier transform for a sequence and the z-transform for the same sequence, we can see that:
+$$
+X(z)\bigg\rvert_{z=e^{j\Omega}} = \mathscr{F}\{x[n]\}
+$$
+Therefore, for $r=1$ the z-transform corresponds to the fourier transform.</p>
+<p>The z-transform for other values of z (other than $ e^{j\Omega}$) is equal to the fourier transform of the same sequence multiplied by $r^{-n}$:
+$$
+X(re^{j\Omega}) = \sum_{n=-\infty}^{+\infty} x[n](re^{j\Omega})^{-n} = \sum_{n=-\infty}^{+\infty} x[n]r^{-n}e^{-j\Omega n}
+$$</p>
+$$
+X(z) = \mathscr{F}\{x[n]r^{-n}\}
+$$<ul>
+<li>For $r&gt;1$: $r^{-n}$ decreases exponentially as n increases.</li>
+<li>For $r&lt;1$: $r^{-n}$ increases exponentially as n increases.</li>
 </ul>
 
 </div>
@@ -1296,8 +1329,7 @@ $$=E[X^2]-(E[X])^2 $$</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="/writing-mathematical-expressions-in-matplotlib.html" title="Previous: Writing mathematical expressions in Matplotlib">Writing mathematical expressions in Matplotlib</a></li>
-                <li class="next-article"><a href="/z-transform.html" title="Next: Z transform">Z transform</a> »</li>
+                <li class="previous-article">« <a href="/expected-value-variance.html" title="Previous: Expected Value and Variance">Expected Value and Variance</a></li>
             </ul>
             </nav>
             </aside>
@@ -1305,10 +1337,10 @@ $$=E[X^2]-(E[X])^2 $$</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2019-11-03T15:45:00-02:00">Nov 3, 2019</time>
+            <time itemprop="dateCreated" datetime="2019-11-03T16:07:00-02:00">Nov 3, 2019</time>
 
 <h4>Last Updated</h4>
-<time datetime="2019-11-03T15:45:00-02:00">Nov 3, 2019</time>
+<time datetime="2019-11-03T16:07:00-02:00">Nov 3, 2019</time>
 
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#digital-signal-processing-ref">digital signal processing</a>
@@ -1317,7 +1349,7 @@ $$=E[X^2]-(E[X])^2 $$</p>
                 <li><a href="/tags#dsp-ref">dsp
                     <span>2</span>
 </a></li>
-                <li><a href="/tags#probability-ref">probability
+                <li><a href="/tags#transform-ref">transform
                     <span>1</span>
 </a></li>
             </ul>
