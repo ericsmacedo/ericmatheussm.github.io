@@ -52,5 +52,5 @@ HOSTED_ON = {
 
 # enabling search
 PLUGIN_PATH = ['plugins']
-PLUGINS = ['tipue_search']
+PLUGINS = ['tipue_search','neighbors']
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives', 'search']
