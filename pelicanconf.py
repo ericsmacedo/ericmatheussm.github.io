@@ -52,5 +52,8 @@ HOSTED_ON = {
 
 # enabling search
 PLUGIN_PATH = ['plugins']
-PLUGINS = ['tipue_search','neighbors']
+PLUGINS = ['tipue_search','neighbors', 'ipynb.markup']
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives', 'search']
+
+# jupyter notebooks
+IGNORE_FILES = [".ipynb_checkpoints"]
