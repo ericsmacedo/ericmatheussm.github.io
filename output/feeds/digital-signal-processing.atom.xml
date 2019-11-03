@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric's blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-11-03T15:45:00-02:00</updated><entry><title>Expected Value and Variance</title><link href="/expected-value-variance.html" rel="alternate"></link><published>2019-11-03T15:45:00-02:00</published><updated>2019-11-03T15:45:00-02:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-11-03:/expected-value-variance.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric's blog - digital signal processing</title><link href="/" rel="alternate"></link><link href="/feeds/digital-signal-processing.atom.xml" rel="self"></link><id>/</id><updated>2019-11-03T15:45:00-02:00</updated><entry><title>Expected Value and Variance</title><link href="/expected-value-variance.html" rel="alternate"></link><published>2019-11-03T15:45:00-02:00</published><updated>2019-11-03T15:45:00-02:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-11-03:/expected-value-variance.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -1222,30 +1222,4 @@ $$=E[X^2]-(E[X])^2 $$&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="digital signal processing"></category><category term="dsp"></category><category term="probability"></category></entry><entry><title>Writing mathematical expressions in Matplotlib</title><link href="/writing-mathematical-expressions-in-matplotlib.html" rel="alternate"></link><published>2019-11-02T16:54:00-03:00</published><updated>2019-11-02T16:55:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-11-02:/writing-mathematical-expressions-in-matplotlib.html</id><summary type="html">&lt;p&gt;It is possible to render LaTeX in matplotlib titles, legends and labels.
-You just need to surround the math text with dollar signs ($) and use 
-raw strings (precede the  quotes with an 'r'). Example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# plain text&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;alpha &amp;gt; pi/2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# math text&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$\alpha &amp;gt; \pi/2$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;More …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It is possible to render LaTeX in matplotlib titles, legends and labels.
-You just need to surround the math text with dollar signs ($) and use 
-raw strings (precede the  quotes with an 'r'). Example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# plain text&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;alpha &amp;gt; pi/2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# math text&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$\alpha &amp;gt; \pi/2$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;More details can be found &lt;a href="https://matplotlib.org/3.1.1/tutorials/text/mathtext.html"&gt;here&lt;/a&gt;.&lt;/p&gt;</content><category term="python"></category><category term="python"></category><category term="matplotlib"></category><category term="latex"></category></entry></feed>
+</content><category term="digital signal processing"></category><category term="dsp"></category><category term="probability"></category></entry></feed>
