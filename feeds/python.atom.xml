@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric's blog - python</title><link href="/" rel="alternate"></link><link href="/feeds/python.atom.xml" rel="self"></link><id>/</id><updated>2019-12-14T21:17:00-02:00</updated><entry><title>Creating X-Y axis plots using python</title><link href="/x-y-axis-using-python.html" rel="alternate"></link><published>2019-12-14T21:17:00-02:00</published><updated>2019-12-14T21:17:00-02:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-12-14:/x-y-axis-using-python.html</id><summary type="html">&lt;p&gt;Just a litle example on how to create x,y axis graphs using python.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric's blog - python</title><link href="/" rel="alternate"></link><link href="/feeds/python.atom.xml" rel="self"></link><id>/</id><updated>2019-12-14T21:17:00-02:00</updated><entry><title>Creating X-Y axis plots using python</title><link href="/x-y-axis-using-python.html" rel="alternate"></link><published>2019-12-14T21:17:00-02:00</published><updated>2019-12-14T21:17:00-02:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-12-14:/x-y-axis-using-python.html</id><summary type="html">&lt;p&gt;Just a little example on how to create x/y axis graphs using python.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="xy_axis plot" src="images/xy_axis.png"&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# we import numpy to create our test signal&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
@@ -10,7 +10,7 @@
 
 &lt;span class="n"&gt;fig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SubplotZero&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;111&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;fig …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Just a litle example on how to create x,y axis graphs using python.&lt;/p&gt;
+&lt;span class="n"&gt;fig …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Just a little example on how to create x/y axis graphs using python.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="xy_axis plot" src="images/xy_axis.png"&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# we import numpy to create our test signal&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
