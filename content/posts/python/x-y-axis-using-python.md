@@ -6,7 +6,7 @@ Tags: python, matplotlib
 Slug: x-y-axis-using-python
 Authors: Eric Macedo
 
-Just a litle example on how to create x,y axis graphs using python.
+Just a little example on how to create x/y axis graphs using python.
 
 ![xy_axis plot](images/xy_axis.png)
 
