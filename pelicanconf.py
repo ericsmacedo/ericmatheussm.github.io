@@ -52,7 +52,7 @@ HOSTED_ON = {
 
 # enabling search
 PLUGIN_PATH = ['plugins']
-PLUGINS = ['tipue_search','neighbors', 'ipynb.markup']
+PLUGINS = ['tipue_search','neighbors', 'ipynb.markup', 'render_math']
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives', 'search']
 
 # jupyter notebooks
