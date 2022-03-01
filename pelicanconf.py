@@ -14,7 +14,7 @@ TIMEZONE = 'America/Sao_Paulo'
 
 DEFAULT_LANG = 'en'
 
-THEME = "elegant"
+THEME = "pelican-themes/elegant"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -51,7 +51,7 @@ HOSTED_ON = {
     }
 
 # enabling search
-PLUGIN_PATH = ['plugins']
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ['tipue_search','neighbors', 'ipynb.markup', 'render_math']
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'archives', 'search']
 

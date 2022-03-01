@@ -64,7 +64,7 @@ e_values = [euler_number(x) for x in delta_values]
 From the plot depicted below, we can see that $e$ converges to 2.71828 as
 delta tends to 0.  
 
-![](images/e_as_delta_tends_to_0.png)  
+![Values of e as delta tends to 0](images/e_as_delta_tends_to_0.png)  
 
 The plot was obtained using the Python code below:
 ```python

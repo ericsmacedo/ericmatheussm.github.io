@@ -29,4 +29,4 @@ plt.grid()
 plt.show()
 ```
 
-![](images/modeling_awgn.png)
+![White Gaussian Noise](images/modeling_awgn.png)
