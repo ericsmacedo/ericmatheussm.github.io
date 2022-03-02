@@ -16,6 +16,8 @@ DEFAULT_LANG = 'en'
 
 THEME = "pelican-themes/elegant"
 
+COMMENTBOX_PROJECT = "5743261448667136-proj"
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
