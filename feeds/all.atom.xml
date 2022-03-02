@@ -80,7 +80,7 @@ $$&lt;/div&gt;
 &lt;/table&gt;
 &lt;p&gt;From the plot depicted below, we can see that &lt;span class="math"&gt;\(e\)&lt;/span&gt; converges to 2.71828 as
 delta tends to 0.  &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="images/e_as_delta_tends_to_0.png"&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Values of e as delta tends to 0" src="images/e_as_delta_tends_to_0.png"&gt;  &lt;/p&gt;
 &lt;p&gt;The plot was obtained using the Python code below:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# values used for delta&lt;/span&gt;
 &lt;span class="n"&gt;delta_values&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -408,7 +408,7 @@ the standard deviation according to the desired noise energy.&lt;/p&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt="" src="images/modeling_awgn.png"&gt;&lt;/p&gt;</content><category term="digital signal processing"></category><category term="dsp"></category><category term="python"></category></entry><entry><title>Z transform</title><link href="/z-transform.html" rel="alternate"></link><published>2019-11-03T16:07:00-03:00</published><updated>2019-11-03T16:07:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-11-03:/z-transform.html</id><summary type="html">&lt;p&gt;The objective is to generalize the fourier transform.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="White Gaussian Noise" src="images/modeling_awgn.png"&gt;&lt;/p&gt;</content><category term="digital signal processing"></category><category term="dsp"></category><category term="python"></category></entry><entry><title>Z transform</title><link href="/z-transform.html" rel="alternate"></link><published>2019-11-03T16:07:00-03:00</published><updated>2019-11-03T16:07:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-11-03:/z-transform.html</id><summary type="html">&lt;p&gt;The objective is to generalize the fourier transform.&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Discrete Time Fourier Transform&lt;/strong&gt;&lt;/h3&gt;
 &lt;div class="math"&gt;$$x[n] =  \sum_{n=-\infty}^{+\infty} x[n]e^{-j \Omega n}$$&lt;/div&gt;
 &lt;p&gt;There is a set of signals more general than the complex exponentials, wich are also eigenfunctions of LTI systems.&lt;/p&gt;

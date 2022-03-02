@@ -194,7 +194,7 @@ the standard deviation according to the desired noise energy.&lt;/p&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt="" src="images/modeling_awgn.png"&gt;&lt;/p&gt;</content><category term="digital signal processing"></category><category term="dsp"></category><category term="python"></category></entry><entry><title>Z transform</title><link href="/z-transform.html" rel="alternate"></link><published>2019-11-03T16:07:00-03:00</published><updated>2019-11-03T16:07:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-11-03:/z-transform.html</id><summary type="html">&lt;p&gt;The objective is to generalize the fourier transform.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="White Gaussian Noise" src="images/modeling_awgn.png"&gt;&lt;/p&gt;</content><category term="digital signal processing"></category><category term="dsp"></category><category term="python"></category></entry><entry><title>Z transform</title><link href="/z-transform.html" rel="alternate"></link><published>2019-11-03T16:07:00-03:00</published><updated>2019-11-03T16:07:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2019-11-03:/z-transform.html</id><summary type="html">&lt;p&gt;The objective is to generalize the fourier transform.&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Discrete Time Fourier Transform&lt;/strong&gt;&lt;/h3&gt;
 &lt;div class="math"&gt;$$x[n] =  \sum_{n=-\infty}^{+\infty} x[n]e^{-j \Omega n}$$&lt;/div&gt;
 &lt;p&gt;There is a set of signals more general than the complex exponentials, wich are also eigenfunctions of LTI systems.&lt;/p&gt;
