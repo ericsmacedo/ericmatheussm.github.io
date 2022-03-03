@@ -15,19 +15,19 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="dsp, probability, digital signal processing, " />
+<meta name="keywords" content="dsp, digital signal processing, " />
 
-<meta property="og:title" content="Expected Value and Variance "/>
-<meta property="og:url" content="/expected-value-variance.html" />
-<meta property="og:description" content="Expected value The expected value of a random variable \(X\) is defined as: $$E[X]=\sum_{i=1}^{k} p_i\cdot x_i$$ where \(p_i\) is the probability of \(x_i\) occurring, and k the number o possible values for the variable \(X\). Interpretations: - Center of gravity of …" />
+<meta property="og:title" content="Rule of thumbs "/>
+<meta property="og:url" content="/rule-of-thumbs.html" />
+<meta property="og:description" content="Having a way of obtaining quick estimates for some design parameter is very useful in engineering, especially during the early stages of a project/design. These estimates help you make quick design decision and adjust your design if your estimate indicates that a certain direction is too risky or will …" />
 <meta property="og:site_name" content="Eric&#39;s blog" />
 <meta property="og:article:author" content="Eric Macedo" />
-<meta property="og:article:published_time" content="2019-11-03T15:45:00-03:00" />
-<meta property="og:article:modified_time" content="2019-11-03T15:45:00-03:00" />
-<meta name="twitter:title" content="Expected Value and Variance ">
-<meta name="twitter:description" content="Expected value The expected value of a random variable \(X\) is defined as: $$E[X]=\sum_{i=1}^{k} p_i\cdot x_i$$ where \(p_i\) is the probability of \(x_i\) occurring, and k the number o possible values for the variable \(X\). Interpretations: - Center of gravity of …">
+<meta property="og:article:published_time" content="2022-03-03T19:00:00-03:00" />
+<meta property="og:article:modified_time" content="2022-03-03T19:00:00-03:00" />
+<meta name="twitter:title" content="Rule of thumbs ">
+<meta name="twitter:description" content="Having a way of obtaining quick estimates for some design parameter is very useful in engineering, especially during the early stages of a project/design. These estimates help you make quick design decision and adjust your design if your estimate indicates that a certain direction is too risky or will …">
 
-        <title>Expected Value and Variance  · Eric&#39;s blog
+        <title>Rule of thumbs  · Eric&#39;s blog
 </title>
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Eric&#39;s blog - Full Atom Feed" />
 
@@ -69,8 +69,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="/expected-value-variance.html">
-                Expected Value and Variance
+            <a href="/rule-of-thumbs.html">
+                Rule of thumbs
             </a>
         </h1>
     </header>
@@ -79,30 +79,41 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <h3>Expected value</h3>
-<p>The expected value of a random variable <span class="math">\(X\)</span> is defined as:</p>
-<div class="math">$$E[X]=\sum_{i=1}^{k} p_i\cdot x_i$$</div>
-<p>where <span class="math">\(p_i\)</span> is the probability of <span class="math">\(x_i\)</span> occurring, and k the number o possible values for the variable <span class="math">\(X\)</span>.</p>
-<p><strong>Interpretations</strong>:
-- Center of gravity of PMF
-- Average in large number of repetitions of the experiment.</p>
-<p><strong>Properties</strong>:</p>
+            <p>Having a way of obtaining quick estimates for some design parameter is very useful in engineering, especially during the early stages of a project/design. These estimates help you make quick design decision and adjust your design if your estimate indicates that a certain direction is too risky or will cost too much. </p>
+<p>I often hear these quick estimates being called <strong>Rule of thumbs</strong>. For example:</p>
 <ul>
-<li><span class="math">\(E[\alpha] = \alpha\)</span></li>
-<li><span class="math">\(E[\alpha X] = \alpha E[X]\)</span></li>
-<li><span class="math">\(E[\alpha X + \beta] = \alpha E[x] + E[\beta]\)</span></li>
+<li>If I decide to rent my property in Edinburgh/UK, how much should I ask for rent?</li>
 </ul>
-<h3>Variance</h3>
-<p>The variance of a random variable can be expressed in terms of the expected value:
+<p>We can create a rule of thumbs for that! Let's say we have the following information about Edinburgh, UK:</p>
+<ul>
+<li>The average property value in Edinburgh is £303,416</li>
+<li>Average rent per calendar month is £1,191 (or 14,292 per year)</li>
+</ul>
+<p>From this, we can create the following rule of thumbs: 
 </p>
-<div class="math">$$var(X) = E[(X-E[X])^2]$$</div>
-<div class="math">$$= \sum_x (x-E[X])^2p_X(x)$$</div>
-<div class="math">$$=E[X^2]-(E[X])^2 $$</div>
-<p><strong>Properties</strong>:</p>
+<div class="math">$$
+\frac{£14,292}{£303,416}\cdot 100 = 4.71\% 
+$$</div>
+<p>
+Therefore, on average, the annual rent value is 4.7% of the property value. We can then say that a rule of thumb is to ask for approximately 5% of your property value (per year).</p>
+<p>Let us apply this rule. If your property is worth £200,000 pounds, an average rent value to ask per month would be (4.71% of £200,000)/12 = £785. You can then start with this value as a reference and adjust it as you get more information and progresses with your plan of renting the house. </p>
+<h2>Number of FIR taps</h2>
+<p>Now, let’s say you are in the middle of a design meeting, and you want to know quickly if you could use a FIR filter in your data path to solve your problem. The key question is:</p>
 <ul>
-<li><span class="math">\(var(X)\geq0\)</span></li>
-<li><span class="math">\(var(\alpha X +\beta) = \alpha^2 var(X)\)</span>: Adding a constant to a random variable does not affect its variance.</li>
+<li>How many taps will the FIR filter need to meet the specification?</li>
 </ul>
+<p>When I was reading Richard Lyons book (Understanding Digital Signal Processing), I came across the following quick estimate formula for the number of taps of a FIR filter:
+</p>
+<div class="math">$$
+N_{firtaps} \approx \frac{Atten}{22(f_{stop}-f_{pass})}
+$$</div>
+<p>
+Where:</p>
+<ul>
+<li>Atten is the attenuation in the stopband measured in dB</li>
+<li>Fstop and Fpass: Stopband and Passband frequencies normalised to the sample rate.</li>
+</ul>
+<p>From this equation, given the specs, you can check very quickly if a FIR filter could be used or if you need to look for alternatives (if the number of taps is too high!).</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -189,7 +200,7 @@
                 <a class="accordion-toggle disqus-comment-count comment-count collapsed"
                    data-toggle="collapse"
                    data-parent="#accordion2"
-                   href="/expected-value-variance.html#comment_thread"
+                   href="/rule-of-thumbs.html#comment_thread"
                    id="comment-accordion-toggle">
                     Comments
                 </a>
@@ -200,7 +211,7 @@
 
 
 
-                        <div class="commentbox" id="/expected-value-variance.html"></div>
+                        <div class="commentbox" id="/rule-of-thumbs.html"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>
     commentBox("5743261448667136-proj", {
@@ -224,15 +235,14 @@
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="/writing-mathematical-expressions-in-matplotlib.html" title="Previous: Writing mathematical expressions in Matplotlib">Writing mathematical expressions in Matplotlib</a></li>
-                <li class="next-article"><a href="/z-transform.html" title="Next: Z transform">Z transform</a> »</li>
+                <li class="previous-article">« <a href="/euler-number.html" title="Previous: e (Euler Number)">e (Euler Number)</a></li>
             </ul>
             </nav>
             </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2019-11-03T15:45:00-03:00">Sun 03 November 2019</time>
+            <time itemprop="dateCreated" datetime="2022-03-03T19:00:00-03:00">Thu 03 March 2022</time>
 
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#digital-signal-processing-ref">digital signal processing</a>
@@ -240,9 +250,6 @@
             <ul class="list-of-tags tags-in-article">
                 <li><a href="/tags.html#dsp-ref">dsp
                     <span class="superscript">5</span>
-</a></li>
-                <li><a href="/tags.html#probability-ref">probability
-                    <span class="superscript">2</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>

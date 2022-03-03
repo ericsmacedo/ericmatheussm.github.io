@@ -1,5 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric's blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-07-03T00:55:00-03:00</updated><entry><title>e (Euler Number)</title><link href="/euler-number.html" rel="alternate"></link><published>2020-07-03T00:55:00-03:00</published><updated>2020-07-03T00:55:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2020-07-03:/euler-number.html</id><summary type="html">&lt;p&gt;Have you ever wondered what is the definition of e? 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric's blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2022-03-03T19:00:00-03:00</updated><entry><title>Rule of thumbs</title><link href="/rule-of-thumbs.html" rel="alternate"></link><published>2022-03-03T19:00:00-03:00</published><updated>2022-03-03T19:00:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2022-03-03:/rule-of-thumbs.html</id><summary type="html">&lt;p&gt;Having a way of obtaining quick estimates for some design parameter is very useful in engineering, especially during the early stages of a project/design. These estimates help you make quick design decision and adjust your design if your estimate indicates that a certain direction is too risky or will …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Having a way of obtaining quick estimates for some design parameter is very useful in engineering, especially during the early stages of a project/design. These estimates help you make quick design decision and adjust your design if your estimate indicates that a certain direction is too risky or will cost too much. &lt;/p&gt;
+&lt;p&gt;I often hear these quick estimates being called &lt;strong&gt;Rule of thumbs&lt;/strong&gt;. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If I decide to rent my property in Edinburgh/UK, how much should I ask for rent?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can create a rule of thumbs for that! Let's say we have the following information about Edinburgh, UK:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The average property value in Edinburgh is £303,416&lt;/li&gt;
+&lt;li&gt;Average rent per calendar month is £1,191 (or 14,292 per year)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From this, we can create the following rule of thumbs: 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\frac{£14,292}{£303,416}\cdot 100 = 4.71\% 
+$$&lt;/div&gt;
+&lt;p&gt;
+Therefore, on average, the annual rent value is 4.7% of the property value. We can then say that a rule of thumb is to ask for approximately 5% of your property value (per year).&lt;/p&gt;
+&lt;p&gt;Let us apply this rule. If your property is worth £200,000 pounds, an average rent value to ask per month would be (4.71% of £200,000)/12 = £785. You can then start with this value as a reference and adjust it as you get more information and progresses with your plan of renting the house. &lt;/p&gt;
+&lt;h2&gt;Number of FIR taps&lt;/h2&gt;
+&lt;p&gt;Now, let’s say you are in the middle of a design meeting, and you want to know quickly if you could use a FIR filter in your data path to solve your problem. The key question is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How many taps will the FIR filter need to meet the specification?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When I was reading Richard Lyons book (Understanding Digital Signal Processing), I came across the following quick estimate formula for the number of taps of a FIR filter:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+N_{firtaps} \approx \frac{Atten}{22(f_{stop}-f_{pass})}
+$$&lt;/div&gt;
+&lt;p&gt;
+Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Atten is the attenuation in the stopband measured in dB&lt;/li&gt;
+&lt;li&gt;Fstop and Fpass: Stopband and Passband frequencies normalised to the sample rate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From this equation, given the specs, you can check very quickly if a FIR filter could be used or if you need to look for alternatives (if the number of taps is too high!).&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="digital signal processing"></category><category term="dsp"></category></entry><entry><title>e (Euler Number)</title><link href="/euler-number.html" rel="alternate"></link><published>2020-07-03T00:55:00-03:00</published><updated>2020-07-03T00:55:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2020-07-03:/euler-number.html</id><summary type="html">&lt;p&gt;Have you ever wondered what is the definition of e? 
 Also known as the “Euler Number”, the constant e is often used when working with
 complex numbers or some mathematical transforms (the Fourier transform, for example).&lt;/p&gt;
 &lt;p&gt;&lt;span class="math"&gt;\(e\)&lt;/span&gt; is a constant approximately equal to 2.71828, and can be defined as …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Have you ever wondered what is the definition of e? 
