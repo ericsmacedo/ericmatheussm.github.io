@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric's blog - vim</title><link href="/" rel="alternate"></link><link href="/feeds/vim.atom.xml" rel="self"></link><id>/</id><updated>2022-03-05T09:19:00-03:00</updated><entry><title>Painless VIM setup</title><link href="/painless-vim-setup.html" rel="alternate"></link><published>2022-03-05T09:19:00-03:00</published><updated>2022-03-05T09:19:00-03:00</updated><author><name>Eric Macedo</name></author><id>tag:None,2022-03-05:/painless-vim-setup.html</id><summary type="html">&lt;p&gt;Setting up vim in another computer was always an annoying task for me. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There were always multiple different copies of the .vimrc file: in my laptop, Desktop, company’s server, etc.&lt;/li&gt;
+&lt;li&gt;I always had to access an old computer, copy the most updated .vimrc to dropbox, so I could have …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Setting up vim in another computer was always an annoying task for me. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There were always multiple different copies of the .vimrc file: in my laptop, Desktop, company’s server, etc.&lt;/li&gt;
+&lt;li&gt;I always had to access an old computer, copy the most updated .vimrc to dropbox, so I could have it in my new pc.&lt;/li&gt;
+&lt;li&gt;Making a change in one place would not update the .vimrc in my other computers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After a few years of pain, I (FINALLY) decided to look for a solution for this problem. Here is what I did:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Created a github account and a new public repository&lt;/strong&gt;: You can access it &lt;a href="https://github.com/ericmatheussm/initvim"&gt;here.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Added my .vimrc to the repo and added the plugin manager I use  to the git repo as git submodule:&lt;/strong&gt; You only need the plugin manager. It will take care of downloading the rest of your plugins later.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, every time I want to setup vim in a new place I just run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/ericmatheussm/initvim ~/.config/nvim
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/.config/nvim
+git submodule init
+git submodule update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That is it! After that I just need to download my plugins using PlugInstall (command used by Plugin manager). Now all the copies I have are synchronised through git.&lt;/p&gt;
+&lt;p&gt;I don’t know why it took me so long to do this!&lt;/p&gt;</content><category term="vim"></category><category term="vim"></category><category term="git"></category></entry></feed>

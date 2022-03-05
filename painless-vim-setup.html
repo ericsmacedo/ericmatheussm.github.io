@@ -15,19 +15,19 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="dsp, digital signal processing, " />
+<meta name="keywords" content="vim, git, vim, " />
 
-<meta property="og:title" content="Rule of thumbs "/>
-<meta property="og:url" content="/rule-of-thumbs.html" />
-<meta property="og:description" content="Having a way of obtaining quick estimates for some design parameter is very useful in engineering, especially during the early stages of a project/design. These estimates help you make quick design decision and adjust your design if your estimate indicates that a certain direction is too risky or will …" />
+<meta property="og:title" content="Painless VIM setup "/>
+<meta property="og:url" content="/painless-vim-setup.html" />
+<meta property="og:description" content="Setting up vim in another computer was always an annoying task for me. There were always multiple different copies of the .vimrc file: in my laptop, Desktop, company’s server, etc. I always had to access an old computer, copy the most updated .vimrc to dropbox, so I could have …" />
 <meta property="og:site_name" content="Eric&#39;s blog" />
 <meta property="og:article:author" content="Eric Macedo" />
-<meta property="og:article:published_time" content="2022-03-03T19:00:00-03:00" />
-<meta property="og:article:modified_time" content="2022-03-03T19:00:00-03:00" />
-<meta name="twitter:title" content="Rule of thumbs ">
-<meta name="twitter:description" content="Having a way of obtaining quick estimates for some design parameter is very useful in engineering, especially during the early stages of a project/design. These estimates help you make quick design decision and adjust your design if your estimate indicates that a certain direction is too risky or will …">
+<meta property="og:article:published_time" content="2022-03-05T09:19:00-03:00" />
+<meta property="og:article:modified_time" content="2022-03-05T09:19:00-03:00" />
+<meta name="twitter:title" content="Painless VIM setup ">
+<meta name="twitter:description" content="Setting up vim in another computer was always an annoying task for me. There were always multiple different copies of the .vimrc file: in my laptop, Desktop, company’s server, etc. I always had to access an old computer, copy the most updated .vimrc to dropbox, so I could have …">
 
-        <title>Rule of thumbs  · Eric&#39;s blog
+        <title>Painless VIM setup  · Eric&#39;s blog
 </title>
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Eric&#39;s blog - Full Atom Feed" />
 
@@ -69,8 +69,8 @@
 <div class="row-fluid">
     <header class="page-header span10 offset2">
         <h1>
-            <a href="/rule-of-thumbs.html">
-                Rule of thumbs
+            <a href="/painless-vim-setup.html">
+                Painless VIM setup
             </a>
         </h1>
     </header>
@@ -79,103 +79,26 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
             
-            <p>Having a way of obtaining quick estimates for some design parameter is very useful in engineering, especially during the early stages of a project/design. These estimates help you make quick design decision and adjust your design if your estimate indicates that a certain direction is too risky or will cost too much. </p>
-<p>I often hear these quick estimates being called <strong>Rule of thumbs</strong>. For example:</p>
+            <p>Setting up vim in another computer was always an annoying task for me. </p>
 <ul>
-<li>If I decide to rent my property in Edinburgh/UK, how much should I ask for rent?</li>
+<li>There were always multiple different copies of the .vimrc file: in my laptop, Desktop, company’s server, etc.</li>
+<li>I always had to access an old computer, copy the most updated .vimrc to dropbox, so I could have it in my new pc.</li>
+<li>Making a change in one place would not update the .vimrc in my other computers.</li>
 </ul>
-<p>We can create a rule of thumbs for that! Let's say we have the following information about Edinburgh, UK:</p>
+<p>After a few years of pain, I (FINALLY) decided to look for a solution for this problem. Here is what I did:</p>
 <ul>
-<li>The average property value in Edinburgh is £303,416</li>
-<li>Average rent per calendar month is £1,191 (or 14,292 per year)</li>
+<li><strong>Created a github account and a new public repository</strong>: You can access it <a href="https://github.com/ericmatheussm/initvim">here.</a></li>
+<li><strong>Added my .vimrc to the repo and added the plugin manager I use  to the git repo as git submodule:</strong> You only need the plugin manager. It will take care of downloading the rest of your plugins later.</li>
 </ul>
-<p>From this, we can create the following rule of thumbs: 
-</p>
-<div class="math">$$
-\frac{£14,292}{£303,416}\cdot 100 = 4.71\% 
-$$</div>
-<p>
-Therefore, on average, the annual rent value is 4.7% of the property value. We can then say that a rule of thumb is to ask for approximately 5% of your property value (per year).</p>
-<p>Let us apply this rule. If your property is worth £200,000 pounds, an average rent value to ask per month would be (4.71% of £200,000)/12 = £785. You can then start with this value as a reference and adjust it as you get more information and progresses with your plan of renting the house. </p>
-<h2>Number of FIR taps</h2>
-<p>Now, let’s say you are in the middle of a design meeting, and you want to know quickly if you could use a FIR filter in your data path to solve your problem. The key question is:</p>
-<ul>
-<li>How many taps will the FIR filter need to meet the specification?</li>
-</ul>
-<p>When I was reading Richard Lyons book (Understanding Digital Signal Processing), I came across the following quick estimate formula for the number of taps of a FIR filter:
-</p>
-<div class="math">$$
-N_{firtaps} \approx \frac{Atten}{22(f_{stop}-f_{pass})}
-$$</div>
-<p>
-Where:</p>
-<ul>
-<li>Atten is the attenuation in the stopband measured in dB</li>
-<li>Fstop and Fpass: Stopband and Passband frequencies normalised to the sample rate.</li>
-</ul>
-<p>From this equation, given the specs, you can check very quickly if a FIR filter could be used or if you need to look for alternatives (if the number of taps is too high!).</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+<p>Now, every time I want to setup vim in a new place I just run:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/ericmatheussm/initvim ~/.config/nvim
+<span class="nb">cd</span> ~/.config/nvim
+git submodule init
+git submodule update
+</code></pre></div>
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
+<p>That is it! After that I just need to download my plugins using PlugInstall (command used by Plugin manager). Now all the copies I have are synchronised through git.</p>
+<p>I don’t know why it took me so long to do this!</p>
 
 
              
@@ -200,7 +123,7 @@ Where:</p>
                 <a class="accordion-toggle disqus-comment-count comment-count collapsed"
                    data-toggle="collapse"
                    data-parent="#accordion2"
-                   href="/rule-of-thumbs.html#comment_thread"
+                   href="/painless-vim-setup.html#comment_thread"
                    id="comment-accordion-toggle">
                     Comments
                 </a>
@@ -211,7 +134,7 @@ Where:</p>
 
 
 
-                        <div class="commentbox" id="/rule-of-thumbs.html"></div>
+                        <div class="commentbox" id="/painless-vim-setup.html"></div>
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>
     commentBox("5743261448667136-proj", {
@@ -235,22 +158,24 @@ Where:</p>
             <aside>
             <nav>
             <ul class="articles-timeline">
-                <li class="previous-article">« <a href="/euler-number.html" title="Previous: e (Euler Number)">e (Euler Number)</a></li>
-                <li class="next-article"><a href="/painless-vim-setup.html" title="Next: Painless VIM setup">Painless VIM setup</a> »</li>
+                <li class="previous-article">« <a href="/rule-of-thumbs.html" title="Previous: Rule of thumbs">Rule of thumbs</a></li>
             </ul>
             </nav>
             </aside>
         </div>
         <section id="article-sidebar" class="span2">
             <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2022-03-03T19:00:00-03:00">Thu 03 March 2022</time>
+            <time itemprop="dateCreated" datetime="2022-03-05T09:19:00-03:00">Sat 05 March 2022</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#digital-signal-processing-ref">digital signal processing</a>
+            <a class="category-link" href="/categories.html#vim-ref">vim</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="/tags.html#dsp-ref">dsp
-                    <span class="superscript">5</span>
+                <li><a href="/tags.html#git-ref">git
+                    <span class="superscript">1</span>
+</a></li>
+                <li><a href="/tags.html#vim-ref">vim
+                    <span class="superscript">1</span>
 </a></li>
             </ul>
 <h4>Stay in Touch</h4>
